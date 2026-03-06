@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1e0320;
+    padding: 50px;
+    width: 100%; 
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fffdfd;
+}
+
+/* ===== CONTENEDOR DE TARJETAS PRINCIPALES (ya usa Flexbox) ===== */
+.contenedor-tarjetas {
+    display: flex;           
+    gap: 20px;               
+    width: 100%;   
+    flex-wrap: wrap;          
+}
+
+.tarjeta {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(182, 132, 240, 0.1);
+    border: 1px solid #400652;
+    flex: 1;
+    min-width: 250px; /* Evita que se hagan demasiado pequeñas */
+}
+
+.tarjeta img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid #000000;
+    display: block;
+}
+
+.tarjeta h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.tarjeta p {
+    color: #ffffff;
+    margin: 8px 0;
+    line-height: 1.4;
+}
+
+.botones {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    flex: 1;
+    max-width: 100px;
+}
+
+.btn-seguir {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn-seguir:hover {
+    background-color: #0056b3;
+}
+
+.btn-mensaje {
+    background-color: #6c757d;
+    color: white;
+}
+
+.btn-mensaje:hover {
+    background-color: #545b62;
+}
+
+.img:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.5); 
+}
+
+.tarjeta img.icono {
+    width: 50px;     
+    height: 50px;  
+    border-radius: 5px;
+    display: inline-block;
+    margin: 0 3px;
+    transition: transform 0.2s ease;
+}
+
+.tarjeta img.icono:hover {
+    transform: scale(1.1);
+}
+
+/* ===== SECCIÓN DE TESTIMONIOS CON FLEXBOX ===== */
+.seccion-testimonios {
+    margin-top: 50px;
+    padding: 30px;
+    background: linear-gradient(135deg, #2a0b2e 0%, #3d1743 100%);
+    border-radius: 20px;
+    border: 1px solid #5a2e60;
+    font-family: 'Arial', sans-serif; 
+    color: #e0e0e0;                  
+    line-height: 1.6;                 
+    text-align: left;                   
+}
+
+.seccion-testimonios h2 {
+    font-family: 'Georgia', serif;     
+    font-size: 2.5rem;
+    color: #ffffff;                     
+    text-align: center;                 
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    letter-spacing: 1px;
+    border-bottom: 2px solid #9b59b6;
+    padding-bottom: 15px;
+}
+
+/* ✅ CONTENEDOR DE TESTIMONIOS CON FLEXBOX */
+.contenedor-testimonios {
+    display: flex;              /* ACTIVAMOS FLEXBOX */
+    flex-wrap: wrap;            /* PARA QUE BAJEN A LA SIGUIENTE LÍNEA SI NO CABEN */
+    gap: 20px;                  /* ESPACIO ENTRE TESTIMONIOS */
+    justify-content: center;    /* CENTRA LOS TESTIMONIOS HORIZONTALMENTE */
+    margin-bottom: 40px;
+}
+
+/* ✅ ESTILO BASE PARA CADA TESTIMONIO */
+.testimonio {
+    flex: 1 1 280px;            /* CRECEN, SE ENCOGEN, BASE 280px */
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonio.destacado {
+    background: linear-gradient(145deg, #4a1d52, #2d1033);
+    border: 2px solid #ffd700;
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+.testimonio-texto {
+    font-size: 1.1rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.testimonio-autor {
+    text-align: right;
+}
+
+.testimonio-autor .nombre {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #ffd700;  
+    margin-bottom: 5px;
+}
+
+.testimonio-autor .cargo {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.testimonio-autor .cargo.destacado {
+    color: #ffd700;
+    font-weight: bold;
+    opacity: 1;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.info-adicional {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    border-left: 4px solid #9b59b6;
+}
+
+.texto-herencia {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.texto-herencia span {
+    background-color: rgba(255, 215, 0, 0.2);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.texto-herencia strong {
+    color: #ffd700; 
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.texto-fuente {
+    font-family: 'Courier New', monospace;
+    font-size: 0.95rem;
+    color: #bb86fc;
+    background-color: rgba(187, 134, 252, 0.1);
+    padding: 10px;
+    border-left: 3px solid #bb86fc;
+}
+
+.etiqueta {
+    background-color: #9b59b6;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
