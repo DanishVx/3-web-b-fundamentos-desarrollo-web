@@ -1,0 +1,32 @@
+/* Fuente base para todo el documento */
+*{
+    background-color: black;
+}
+
+body {
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 16px;
+    color: #2c05db;
+    line-height: 1.5;
+}
+
+/* H1 con su propia fuente */
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    color: #ff03dd;
+    /* El tamaño, color, etc. lo hereda del body */
+}
+
+/* Párrafos con su propia fuente */
+p {
+    font-family: "Betania Patmos GDL", serif;
+    /* El resto heredado del body */
+}
+
+/* Spans con su propia fuente */
+span {
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 300;  /* Un poco más light */
+    color: #05eeff;
+    /* El resto heredado del body */
+}
